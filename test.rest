@@ -1,0 +1,30 @@
+
+
+
+GET http://localhost:3002/api/todos
+
+###
+POST http://localhost:3002/api/todos
+Content-Type: application/json
+
+{
+    "title": "La riviere rouge",
+    "important": true,
+    "id":2
+}
+
+
+###
+
+
+GET http://localhost:3002/api/todos
+
+###
+POST http://localhost:3002/api/todos
+Content-Type: application/json
+
+{
+    "title": "La riviere rouge",
+    "important": true,
+    "id":2
+}
