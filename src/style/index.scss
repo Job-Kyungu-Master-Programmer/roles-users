@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.app {
+  padding: 1.3em;
+  // margin: 10em;
+  border: 1px solid green;
+}
+
+
+// Nav 
+.nav {
+  display: flex;
+  align-items: center;
+  background: rgb(74, 74, 255);
+  padding: .4em 2em;
+  justify-content: space-between;
+
+  &__item {
+    margin-right: 4em;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    padding: .5em 1em;
+    border: 1px solid rgb(232, 232, 232);
+
+    &:hover {
+      background: black;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2em;
+    list-style: none;
+    background: rgb(232, 232, 232);
+  
+    &__name {
+      margin-left: 2em;
+      font-weight: 800;
+      text-decoration: overline;
+    }
+
+  }
+}
+
+.admin {
+  margin-left: 2em;
+  background: black;
+}
+
+// Home 
+
+.home {
+  &__title {
+    font-size: 2.1em;
+  }
+
+  &__p {
+    font-size: 1.5em;
+  }
+}
+
+
+.todos {
+  &__title {
+    font-size: 2.3em;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  &__item  {
+    margin-right: 1em;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #c0c0c0;
+    background: #d1d1d1
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    margin-right: 2em!important;
+  }
+
+  &__delete {
+    background-color: red!important;
+  }
+}
+
+// Todos
+
+
+
+.sign {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+  }
+
+  &__input {
+    margin-bottom: 1em;
+    padding: 1em;
+  }
+
+  &__btn {
+    margin-top: 1.1em!important;
+  }
+}
+

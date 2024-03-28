@@ -1,0 +1,15 @@
+{
+  "todos": [
+    {
+      "id": "ddec",
+      "title": "Wires "
+    }
+  ],
+  "users": [
+    {
+      "id": "6a0b",
+      "username": "Matt",
+      "password": "mat"
+    }
+  ]
+}
