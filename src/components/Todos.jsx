@@ -5,13 +5,6 @@ import { delet  } from '../api/Base'
 
 const Todos = ({ setTodos, addTodos, todos,title,setTitle }) => {
 
-    // const onDelete = (id) => {
-    //     const todoId = todos.filter(t => t.id !== id)
-    //     Base.delet(id, todoId).then(result => {
-    //         setTodos(todos.map(t => t.id !== id ? t : result))
-    //         setTodos(todos.filter(t => t.id !== id))
-    //     })
-    // }
     const onDelete = (id) => {
         const noteId = todos.filter(note => note.id !== id)
         delet(id, noteId).then(result => {

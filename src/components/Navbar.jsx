@@ -2,16 +2,20 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Navbar = ({ user, logout }) => {
-  const isAdmins = user && user.roles && user.roles.includes('admin')
+  //Pour autoriser que les Admin a voir le bouton d'ajoute d'autres admins
+  const isAdmins = user && user.roles && user.roles.includes('admin') 
+
   return (
     <div className="nav">
       <ul className="nav__list">
         <Link to='/' className="nav__item">Home</Link>
         <Link to='/todos' className="nav__item">Todos</Link>
-        {/* <Link to='/todos/:id' className="nav__item">Todo</Link> */}
+        <Link to='/todos/:id' className="nav__item">Todo</Link>
         <Link to='/sign' className="nav__item">Sign</Link>
         <Link to='/signup' className="nav__item">Signup</Link>
         <Link to='/users-admin' className="nav__item">Users</Link>
+        <Link to='/status' className="nav__item">Status</Link>
+        <Link to='/admin/todos-status' className="nav__item">Liste Order User</Link>
       </ul>
       <div className="menu">
         {user ? (

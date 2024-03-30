@@ -64,4 +64,14 @@ const delUser = async (object, id) => {
     }
 };
 
-export { getAll, create, delet, getUser, createUser, delUser, setToken };
+//FUNCTION pour update notre Status
+const updateStatus = (id, newStatus) => {
+    // newStatus est envoyé comme un objet avec un champ 'status'
+    const request = axios.put(`${urlTodo}/${id}/status`, { status: newStatus });
+    return request.then(response => response.data);
+};
+
+
+
+
+export { getAll, create, delet, getUser, createUser, delUser, setToken, updateStatus };

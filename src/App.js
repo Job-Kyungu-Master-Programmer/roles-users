@@ -3,7 +3,7 @@ import Todos from "./components/Todos"
 import Home from "./components/Home"
 import Todo from "./components/Todo"
 import Navbar from './components/Navbar'
-import { useEffect, useState } from 'react'
+import React,{ useEffect, useState } from 'react'
 import Sign from './components/Sign'
 import Signup from './components/Signup'
 import SignupPublic from './components/SignupPublic'
@@ -11,6 +11,10 @@ import { getAll, create, getUser, createUser, delUser, setToken  } from './api/B
 import UsersAdmin from './components/UsersAdmin'
 import auth from './api/auth'
 import ProtectedRoute from './api/ProtectedRoutes/ProtectedRoute'
+import Track from './components/Track'
+import TodoStatus from './components/TodoStatus'
+import TodosStatusList from './components/TodosStatusList'
+
 
 const App = () => {
   const [todos, setTodos] = useState([])
@@ -116,6 +120,7 @@ const App = () => {
             todos={todos} setTodos={setTodos} />}
           />
           <Route  path='/todos/:id' element={<Todo todos={todos} />} />
+          <Route path="/todos/:id/status" element={<TodoStatus todos={todos}  />} />
           <Route  path='/sign' element={<Sign
             addLogin={handleLogin} username={username} password={password}
             setUsername={setUsername} setPassword={setPassword}
@@ -125,6 +130,7 @@ const App = () => {
             setPassword={setPassword} setUsername={setUsername}
           />} />
             <Route  path='/users-admin' element={<UsersAdmin setUsers={setUsers} users={users} />} />
+            <Route  path='/status' element={<Track />} />
           <Route  
           path='/add-admin' 
           element={
@@ -137,6 +143,7 @@ const App = () => {
           </ProtectedRoute>
            }
           />
+           <Route path="/admin/todos-status" element={<TodosStatusList setTodos={setTodos} todos={todos} />} />
           </Routes>
       </div>
      </div>
