@@ -3,8 +3,17 @@ mongoose.set('strictQuery', false)
 
 const todoChema = new mongoose.Schema({
     title: String,
-    important: Boolean
-})
+    important: Boolean,
+    createdBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    },
+    statusHistory: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref:'Status'
+    }],
+    currentStatus: String // Ajout d'un champ pour stocker le statut actuel
+});
 
 todoChema.set('toJSON', {
     transform: (document, inter) => {

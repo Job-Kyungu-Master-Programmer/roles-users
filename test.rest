@@ -13,8 +13,23 @@ Content-Type: application/json
     "id":2
 }
 
+### POUR USER SIMPLE
+PUT http://localhost:3002/api/todos/6606dcb12b0709f456a54d66/status
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkplYW5jeSIsInJvbGVzIjoiYWRtaW4iLCJpZCI6IjY2MDVhYmY1YWM0ODVlMmQ0MTBhMTUzZCIsImlhdCI6MTcxMTc0NzEyOX0.x62uJpm8ezT1N8JEK78AjkvdkbFpl16ixvgsDV88ZdA
 
+{
+    "status": "terminé"
+}
+### POUR ADMINS
+PUT http://localhost:3002/api/todos/6606fd5b54daa115b2d24fc9/status
+Content-Type: application/json
+
+{
+    "status": "terminé"
+}
 ###
+
 
 
 GET http://localhost:3002/api/users
@@ -22,23 +37,23 @@ GET http://localhost:3002/api/users
 ###
 POST http://localhost:3002/api/users
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRhbG9zIiwicm9sZXMiOiJhZG1pbiIsImlkIjoiNjYwNDA5OTFkNTQ0OTg5ZTRhODUyNTdkIiwiaWF0IjoxNzExNjQ1MjgwfQ.SRlWngUVuP2kxaTnrmImIj6PDy2EpQ74_7MoHfL_FAc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkplYW5jeSIsInJvbGVzIjoiYWRtaW4iLCJpZCI6IjY2MDVhYmY1YWM0ODVlMmQ0MTBhMTUzZCIsImlhdCI6MTcxMTczNDk5NX0.96Ato6jZROPgz8uzITx0WzmRz14sYTtt5QKtpMq2gzc
 
 {
-    "username": "Grace",
-    "password": "gr",
-    "roles": "user"
+    "username": "Dalos",
+    "password": "jc",
+    "roles": "admin"
 }
 ###Login 
-DELETE http://localhost:3002/api/users/6605abd4ac485e2d410a1536
+DELETE http://localhost:3002/api/users/660700bbdf92ab7723f5239c
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRhbG9zIiwicm9sZXMiOiJhZG1pbiIsImlkIjoiNjYwNDA5OTFkNTQ0OTg5ZTRhODUyNTdkIiwiaWF0IjoxNzExNjQ1NTA3fQ.Ea6_Oqi-tm3zBKO7AesGCO9_9gldrxrS3luuJ5vezUA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkplYW5jeSIsInJvbGVzIjoiYWRtaW4iLCJpZCI6IjY2MDVhYmY1YWM0ODVlMmQ0MTBhMTUzZCIsImlhdCI6MTcxMTczNDk5NX0.96Ato6jZROPgz8uzITx0WzmRz14sYTtt5QKtpMq2gzc
 
 ###
 POST http://localhost:3002/api/login
 Content-Type: application/json
 
 {
-    "username": "Dalos",
-    "password": "jc"
+    "username": "Jeancy",
+    "password": "je"
 }

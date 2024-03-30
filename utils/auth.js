@@ -9,6 +9,11 @@ const User = require('../models/User')
 // Ici l'idee est de reinstrendre l'acces aux user SIMPLE pour creer les ADMIN
 // SEUL L'ADMIN POURRA CREER UN AUTRE ADMIN
 
+// ENFAITE CE MIDDLEWARE AIDE JUSTE A VERIFIER ET DONNER JUSTE L'ACCESS
+// A CEUX QUI SONT LES ADMIN, ET NON USER SIMPLE,
+// ON PEUT L'UTILISER A TOUTE LES ROUTES OU ON NE VEUT PAS QUE LES USER AYE
+// L'ACCESS
+
 
 const isAdmin = async (request) => {
     const token = request.get('authorization');
@@ -23,6 +28,8 @@ const isAdmin = async (request) => {
     } catch (err) {
         return false
     }
+
+
 }
 
 
